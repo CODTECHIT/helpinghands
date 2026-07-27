@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import Link from "next/link";
 import { Facebook, Instagram, Linkedin, Youtube, MapPin, Phone, Mail } from "lucide-react";
 import logo from "@/assets/helping-hands-logo.asset.json";
 
@@ -71,7 +71,7 @@ export function SiteFooter() {
             <ul className="space-y-2.5 text-sm">
               {col.links.map((l) => (
                 <li key={l.to}>
-                  <Link to={l.to as "/"} className="transition-colors hover:text-on-navy">
+                  <Link href={l.to} className="transition-colors hover:text-on-navy">
                     {l.label}
                   </Link>
                 </li>
@@ -100,16 +100,16 @@ export function SiteFooter() {
         <div className="shell flex flex-col gap-3 py-6 text-xs md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} Helping Hands Foundation. All rights reserved.</p>
           <div className="flex flex-wrap gap-5">
-            <Link to="/privacy" className="hover:text-on-navy">
+            <Link href="/privacy" className="hover:text-on-navy">
               Privacy Policy
             </Link>
-            <Link to="/terms" className="hover:text-on-navy">
+            <Link href="/terms" className="hover:text-on-navy">
               Terms &amp; Conditions
             </Link>
-            <Link to="/refund" className="hover:text-on-navy">
+            <Link href="/refund" className="hover:text-on-navy">
               Refund Policy
             </Link>
-            <Link to="/disclaimer" className="hover:text-on-navy">
+            <Link href="/disclaimer" className="hover:text-on-navy">
               Disclaimer
             </Link>
           </div>

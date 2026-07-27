@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { Reveal } from "@/components/Reveal";
-import heroCollage from "@/assets/hero-collage.jpg";
+import heroCollage from "@/assets/hero-collage.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -371,9 +371,8 @@ function Home() {
           ].map((p, i) => (
             <Reveal key={p.t}>
               <article
-                className={`grid items-center gap-10 lg:grid-cols-2 lg:gap-16 ${
-                  i % 2 === 1 ? "lg:[&>div:first-child]:order-2" : ""
-                }`}
+                className={`grid items-center gap-10 lg:grid-cols-2 lg:gap-16 ${i % 2 === 1 ? "lg:[&>div:first-child]:order-2" : ""
+                  }`}
               >
                 <div className="aspect-[4/3] rounded-md border border-border bg-gradient-to-br from-teal/15 via-sand to-orange/20" />
                 <div>
@@ -448,9 +447,8 @@ function Home() {
                   key={i}
                   aria-label={`Testimonial ${i + 1}`}
                   onClick={() => setTi(i)}
-                  className={`h-1.5 rounded-full transition-all ${
-                    i === ti ? "w-8 bg-orange" : "w-3 bg-on-navy/30"
-                  }`}
+                  className={`h-1.5 rounded-full transition-all ${i === ti ? "w-8 bg-orange" : "w-3 bg-on-navy/30"
+                    }`}
                 />
               ))}
             </div>

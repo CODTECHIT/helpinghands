@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import Link from "next/link";
 import { SiteLayout } from "@/components/SiteLayout";
 
 export function ComingSoon({
@@ -20,13 +20,13 @@ export function ComingSoon({
         <p className="mt-6 max-w-xl leading-relaxed text-ink/70">{note}</p>
         <div className="mt-9 flex flex-wrap gap-3">
           <Link
-            to="/"
+            href="/"
             className="rounded-sm border border-navy px-6 py-3 text-sm font-semibold text-navy transition-colors hover:bg-navy hover:text-cream"
           >
             Back home
           </Link>
           <Link
-            to="/contact"
+            href="/contact"
             className="rounded-sm bg-teal px-6 py-3 text-sm font-semibold text-cream"
           >
             Contact us

@@ -19,8 +19,8 @@
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
 
-  --font-display: "Fraunces", ui-serif, Georgia, serif;
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: var(--font-inter), "Inter", ui-sans-serif, system-ui, sans-serif;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -130,9 +130,12 @@
 }
 
 @utility section-pad {
-  padding-block: 5rem;
+  padding-block: 2.75rem;
+  @media (min-width: 768px) {
+    padding-block: 3.75rem;
+  }
   @media (min-width: 1024px) {
-    padding-block: 7.5rem;
+    padding-block: 4.75rem;
   }
 }
 
@@ -140,7 +143,10 @@
   width: 100%;
   margin-inline: auto;
   max-width: 78rem;
-  padding-inline: 1.5rem;
+  padding-inline: 1.25rem;
+  @media (min-width: 640px) {
+    padding-inline: 1.75rem;
+  }
   @media (min-width: 1024px) {
     padding-inline: 2.5rem;
   }

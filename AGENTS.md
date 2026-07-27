@@ -4,13 +4,12 @@ This is the **Helping Hands Foundation** website.
 
 ## Tech stack
 
-- TanStack Start + TanStack Router (file-based routing under `src/routes/`)
+- Next.js 15 (App Router, file-system routing under `src/app/`)
 - React 19, TypeScript, Tailwind CSS v4
-- Vite 8 for bundling
 
 ## Key conventions
 
-- Route files live in `src/routes/`. File names map directly to URL paths.
+- Route files live in `src/app/`. Each directory represents a route segment containing `page.tsx` or `layout.tsx`.
 - Shared UI primitives are in `src/components/ui/` (shadcn-style components).
 - Page-level components are in `src/components/`.
 - Data/constants are in `src/data/`.

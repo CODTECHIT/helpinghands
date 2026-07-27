@@ -1,4 +1,7 @@
-import { Link } from "@tanstack/react-router";
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, X, Phone, Mail, MessageCircle, ChevronDown } from "lucide-react";
 import logo from "@/assets/helping-hands-logo.asset.json";
@@ -41,6 +44,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [lang, setLang] = useState<"EN" | "HI">("EN");
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -85,13 +89,13 @@ export function SiteHeader() {
               ))}
             </div>
             <span className="h-3 w-px bg-on-navy/25" />
-            <Link to="/login" className="hover:text-orange">
+            <Link href="/login" className="hover:text-orange">
               Member Login
             </Link>
-            <Link to="/login" className="hover:text-orange">
+            <Link href="/login" className="hover:text-orange">
               Coordinator Login
             </Link>
-            <Link to="/login" className="hover:text-orange">
+            <Link href="/login" className="hover:text-orange">
               Admin Login
             </Link>
           </div>
@@ -106,7 +110,7 @@ export function SiteHeader() {
         }`}
       >
         <div className="shell flex h-20 items-center justify-between gap-6">
-          <Link to="/" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3">
             <img
               src={logo.url}
               alt="Helping Hands Foundation logo"
@@ -136,8 +140,10 @@ export function SiteHeader() {
                     {item.children.map((c) => (
                       <Link
                         key={c.to}
-                        to={c.to as "/"}
-                        className="block rounded-sm px-3 py-2 text-sm text-ink/80 transition-colors hover:bg-sand hover:text-navy"
+                        href={c.to!}
+                        className={`block rounded-sm px-3 py-2 text-sm transition-colors hover:bg-sand hover:text-navy ${
+                          pathname === c.to ? "bg-sand font-semibold text-teal" : "text-ink/80"
+                        }`}
                       >
                         {c.label}
                       </Link>
@@ -147,10 +153,12 @@ export function SiteHeader() {
               ) : (
                 <Link
                   key={item.to}
-                  to={item.to! as "/"}
-                  activeOptions={{ exact: item.to === "/" }}
-                  activeProps={{ className: "text-teal" }}
-                  className="px-3 py-2 text-sm font-medium text-navy transition-colors hover:text-teal"
+                  href={item.to!}
+                  className={`px-3 py-2 text-sm font-medium transition-colors hover:text-teal ${
+                    pathname === item.to || (item.to !== "/" && pathname?.startsWith(item.to!))
+                      ? "text-teal"
+                      : "text-navy"
+                  }`}
                 >
                   {item.label}
                 </Link>
@@ -160,7 +168,7 @@ export function SiteHeader() {
 
           <div className="flex items-center gap-2">
             <Link
-              to="/donate"
+              href="/donate"
               className="hidden rounded-sm bg-coral px-5 py-2.5 text-sm font-semibold text-cream shadow-soft transition-transform hover:-translate-y-0.5 sm:inline-block"
             >
               Donate
@@ -195,9 +203,11 @@ export function SiteHeader() {
                 <div key={item.label}>
                   {item.to ? (
                     <Link
-                      to={item.to as "/"}
+                      href={item.to}
                       onClick={() => setOpen(false)}
-                      className="block font-display text-xl text-navy"
+                      className={`block font-display text-xl ${
+                        pathname === item.to ? "text-teal font-bold" : "text-navy"
+                      }`}
                     >
                       {item.label}
                     </Link>
@@ -208,9 +218,11 @@ export function SiteHeader() {
                         {item.children!.map((c) => (
                           <Link
                             key={c.to}
-                            to={c.to as "/"}
+                            href={c.to}
                             onClick={() => setOpen(false)}
-                            className="block text-[15px] text-ink/80"
+                            className={`block text-[15px] ${
+                              pathname === c.to ? "text-teal font-semibold" : "text-ink/80"
+                            }`}
                           >
                             {c.label}
                           </Link>
@@ -223,14 +235,14 @@ export function SiteHeader() {
             </nav>
             <div className="space-y-3 border-t border-border pt-5">
               <Link
-                to="/donate"
+                href="/donate"
                 onClick={() => setOpen(false)}
                 className="block rounded-sm bg-coral px-5 py-3 text-center text-sm font-semibold text-cream"
               >
                 Donate Now
               </Link>
               <Link
-                to="/login"
+                href="/login"
                 onClick={() => setOpen(false)}
                 className="block rounded-sm border border-navy px-5 py-3 text-center text-sm font-semibold text-navy"
               >
