@@ -1,0 +1,176 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Helping Hands Foundation design system.
+ * Brand: navy #1B3A5C, brown #3D2817, teal #0F7A6E, orange #E8963C,
+ * coral #D94F4F, cream #FAF7F0, ink #22201D. All values in oklch.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+
+  --color-navy: var(--navy);
+  --color-navy-deep: var(--navy-deep);
+  --color-brown: var(--brown);
+  --color-teal: var(--teal);
+  --color-orange: var(--orange);
+  --color-coral: var(--coral);
+  --color-cream: var(--cream);
+  --color-sand: var(--sand);
+  --color-ink: var(--ink);
+  --color-on-navy: var(--on-navy);
+
+  --shadow-soft:
+    0 1px 2px oklch(0.343 0.07 252.4 / 0.05), 0 18px 40px -24px oklch(0.343 0.07 252.4 / 0.28);
+  --shadow-lift:
+    0 2px 4px oklch(0.343 0.07 252.4 / 0.06), 0 30px 60px -30px oklch(0.343 0.07 252.4 / 0.4);
+}
+
+:root {
+  --radius: 0.5rem;
+
+  --navy: oklch(0.343 0.07 252.4);
+  --navy-deep: oklch(0.271 0.051 251.2);
+  --brown: oklch(0.298 0.042 59.2);
+  --teal: oklch(0.522 0.09 182.7);
+  --orange: oklch(0.741 0.142 64.5);
+  --coral: oklch(0.614 0.174 23.7);
+  --cream: oklch(0.977 0.01 87.5);
+  --sand: oklch(0.944 0.017 84.6);
+  --ink: oklch(0.245 0.006 78.2);
+  --on-navy: oklch(0.977 0.01 87.5);
+
+  --background: var(--cream);
+  --foreground: var(--ink);
+  --card: oklch(1 0 0);
+  --card-foreground: var(--ink);
+  --popover: oklch(1 0 0);
+  --popover-foreground: var(--ink);
+  --primary: var(--navy);
+  --primary-foreground: var(--cream);
+  --secondary: var(--sand);
+  --secondary-foreground: var(--brown);
+  --muted: var(--sand);
+  --muted-foreground: oklch(0.506 0.019 79.3);
+  --accent: var(--teal);
+  --accent-foreground: var(--cream);
+  --destructive: var(--coral);
+  --destructive-foreground: var(--cream);
+  --border: oklch(0.895 0.014 84);
+  --input: oklch(0.895 0.014 84);
+  --ring: var(--teal);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.015em;
+  }
+}
+
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-brown);
+}
+
+@utility section-pad {
+  padding-block: 5rem;
+  @media (min-width: 1024px) {
+    padding-block: 7.5rem;
+  }
+}
+
+@utility shell {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 78rem;
+  padding-inline: 1.5rem;
+  @media (min-width: 1024px) {
+    padding-inline: 2.5rem;
+  }
+}
+
+@utility rule-teal {
+  &::before {
+    content: "";
+    display: block;
+    width: 2.5rem;
+    height: 2px;
+    background: var(--color-teal);
+    margin-bottom: 1.25rem;
+  }
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility reveal {
+  opacity: 0;
+  &[data-visible="true"] {
+    animation: reveal-up 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  }
+}
