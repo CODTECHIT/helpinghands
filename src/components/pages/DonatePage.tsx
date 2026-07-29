@@ -31,15 +31,15 @@ export function DonatePage() {
     <SiteLayout>
       <PageHero
         eyebrow="Give"
-        title="Every rupee is tracked, reported and audited."
-        intro="Choose an amount, choose where it goes, and receive an 80G receipt within 48 hours. Administrative costs are capped at 10% and currently stand at 7.8%."
+        title="Every rupee is tracked and audited."
+        intro="Helping Hands Foundation is committed to transparency. Choose an amount, choose where it goes, and receive a payment receipt immediately. Applications for 12A and 80G registrations are currently in progress."
         aside={
           <div className="flex flex-wrap gap-5 text-xs text-muted-foreground">
             <span className="flex items-center gap-1.5">
-              <ShieldCheck className="size-3.5 text-teal" /> 80G & 12A registered
+              <ShieldCheck className="size-3.5 text-teal" /> 12A & 80G in progress
             </span>
             <span className="flex items-center gap-1.5">
-              <Receipt className="size-3.5 text-teal" /> Receipt in 48 hours
+              <Receipt className="size-3.5 text-teal" /> Receipt on donation
             </span>
           </div>
         }
@@ -146,8 +146,8 @@ export function DonatePage() {
             )}
 
             <p className="mt-5 text-center text-[11px] leading-relaxed text-muted-foreground">
-              Donations to Helping Hands Foundation are exempt under Section 80G of the Income Tax
-              Act. Foreign contributions accepted only through our designated FCRA account.
+              Applications for Section 12A and 80G status are in progress. Donations will become
+              tax-exempt once approvals are received.
             </p>
           </div>
 
@@ -170,7 +170,7 @@ export function DonatePage() {
                     {
                       icon: Receipt,
                       t: "Bank transfer / UPI",
-                      d: "A/C 000000000000 · IFSC [PLACEHOLDER] · UPI helpinghands@bank",
+                      d: "Bank account details will be updated once the registration with the Sub-Registrar and PAN allotment are completed.",
                     },
                   ].map(({ icon: Icon, t, d }) => (
                     <div key={t} className="bg-cream p-6">

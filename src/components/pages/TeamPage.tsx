@@ -1,12 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { TEAM } from "@/data/content";
-
-const GROUPS = ["All", "Board", "Leadership", "Programme", "Advisory"] as const;
 
 const TONE: Record<string, string> = {
   teal: "bg-teal text-cream",
@@ -16,35 +13,18 @@ const TONE: Record<string, string> = {
 };
 
 export function TeamPage() {
-  const [group, setGroup] = useState<string>("All");
-  const list = TEAM.filter((p) => group === "All" || p.group === group);
+  const list = TEAM;
 
   return (
     <SiteLayout>
       <PageHero
         eyebrow="People"
         title="Every decision here has a name attached to it."
-        intro="Eleven people carry formal responsibility for programmes, money and safeguarding. We publish who they are and what they own, because accountability that cannot be addressed to a person is not accountability."
+        intro="Three Life Trustees carry formal responsibility for administration, finances, records, and operations of the Trust. We publish who they are and what they own, because accountability that cannot be addressed to a person is not accountability."
       />
 
       <section className="section-pad">
         <div className="shell">
-          <div className="flex flex-wrap gap-2 border-b border-border pb-6">
-            {GROUPS.map((g) => (
-              <button
-                key={g}
-                onClick={() => setGroup(g)}
-                className={`rounded-full border px-4 py-1.5 text-xs font-semibold transition-colors ${
-                  group === g
-                    ? "border-navy bg-navy text-cream"
-                    : "border-border text-ink/65 hover:border-navy/40"
-                }`}
-              >
-                {g}
-              </button>
-            ))}
-          </div>
-
           <div className="mt-10 grid gap-x-12 gap-y-10 md:grid-cols-2 xl:grid-cols-3">
             {list.map((p, i) => (
               <Reveal key={p.name} delay={i * 40}>
@@ -75,18 +55,16 @@ export function TeamPage() {
           <div>
             <p className="eyebrow rule-teal">Governance</p>
             <h2 className="max-w-[20ch] font-display text-3xl leading-tight text-brown">
-              The board meets quarterly and the minutes are filed.
+              Board meetings are held regularly to review administrative decisions.
             </h2>
           </div>
           <div className="space-y-4 self-end text-sm leading-relaxed text-ink/70">
             <p>
-              No trustee draws remuneration. Related-party transactions are disclosed in the annual
-              report. The audit and finance committee is chaired by a trustee who is not part of
-              executive management.
-            </p>
-            <p>
-              Safeguarding concerns can be raised directly with the child-safeguarding advisor,
-              bypassing the executive team entirely.
+              All Trustees are Life Trustees and serve without profit motive. The bank account is
+              operated jointly by the President and either the Secretary or the Treasurer. General
+              Body meetings are held at least once a year; the Managing Committee meets at least
+              once every six months. Any amendment to the Trust Deed requires approval from the
+              Commissioner of Income Tax (Exemptions).
             </p>
           </div>
         </div>

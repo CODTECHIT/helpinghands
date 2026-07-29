@@ -7,8 +7,8 @@ export function PrivacyPage() {
     <LegalPage
       eyebrow="Legal"
       title="We collect the minimum, and we tell you exactly what it is."
-      intro="This policy covers donors, members, volunteers, job applicants and visitors to this website. It applies to Helping Hands Foundation, a public charitable trust registered in Pune."
-      updated="1 April 2026"
+      intro="This policy covers donors, members, volunteers, job applicants and visitors to this website. It applies to Helping Hands Foundation, a public charitable trust registered in Adoni, Kurnool District, Andhra Pradesh."
+      updated="3 August 2026"
       sections={[
         {
           heading: "What we collect",
@@ -24,7 +24,7 @@ export function PrivacyPage() {
         {
           heading: "Why we hold it",
           paras: [
-            "Donor data is held to issue statutory receipts, meet income-tax and FCRA reporting obligations, and to send you reports on the work you funded.",
+            "Donor data is held to issue statutory receipts, meet income-tax reporting obligations, and to send you reports on the work you funded.",
             "Volunteer and member data is held to run placements, safeguard the people we work with, and maintain an auditable record of who was in the field and when.",
           ],
         },
@@ -38,7 +38,7 @@ export function PrivacyPage() {
         {
           heading: "How long we keep it",
           paras: [
-            "Donation records are retained for eight financial years, as required under Indian tax and FCRA rules. Volunteer records are retained for three years after last engagement. Unsuccessful job applications are deleted after twelve months.",
+            "Donation records are retained for eight financial years, as required under Indian tax rules. Volunteer records are retained for three years after last engagement. Unsuccessful job applications are deleted after twelve months.",
           ],
         },
         {
@@ -51,7 +51,7 @@ export function PrivacyPage() {
           heading: "Your rights",
           paras: [
             "You may ask us for a copy of your data, ask us to correct it, ask us to stop contacting you, or ask us to delete it — except where a statutory retention rule prevents deletion, in which case we will tell you which rule applies.",
-            "Write to legal@helpinghandsfoundation.org. We respond within fifteen working days.",
+            "Contact us via our official head office address or through the contact form on this site. We respond within fifteen working days.",
           ],
         },
         {

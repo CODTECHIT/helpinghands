@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -9,74 +9,10 @@ import {
   HeartPulse,
   Leaf,
   Users,
-  Quote,
   CalendarDays,
-  MapPin,
 } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { Reveal } from "@/components/Reveal";
-
-const COUNTERS = [
-  { label: "Lives Impacted", value: 48250, suffix: "+" },
-  { label: "Volunteers", value: 1240, suffix: "+" },
-  { label: "Projects Completed", value: 186, suffix: "" },
-  { label: "Cities Reached", value: 34, suffix: "" },
-];
-
-const CAMPAIGNS = [
-  {
-    title: "School Kits for 2,000 Children",
-    cat: "Education",
-    raised: 742000,
-    goal: 1200000,
-    days: 24,
-  },
-  {
-    title: "Mobile Health Camp — Rural Belt",
-    cat: "Health",
-    raised: 385000,
-    goal: 600000,
-    days: 11,
-  },
-  { title: "Skill Centre for Women", cat: "Empowerment", raised: 918000, goal: 1000000, days: 39 },
-];
-
-const EVENTS = [
-  { d: "12", m: "Aug", title: "Community Health Camp", place: "Nashik, MH" },
-  { d: "27", m: "Aug", title: "Volunteer Orientation", place: "Pune, MH" },
-  { d: "05", m: "Sep", title: "Teachers' Day Felicitation", place: "Nagpur, MH" },
-  { d: "21", m: "Sep", title: "Tree Plantation Drive", place: "Aurangabad, MH" },
-];
-
-const TESTIMONIALS = [
-  {
-    quote:
-      "My daughter was out of school for two years. The Foundation's team enrolled her, arranged books, and today she wants to become a doctor.",
-    name: "Sunita Kale",
-    role: "Parent, Education Programme",
-  },
-  {
-    quote:
-      "I volunteered for one health camp and stayed for three years. The way this team plans on the ground is simply unmatched.",
-    name: "Rahul Deshmukh",
-    role: "Volunteer since 2022",
-  },
-  {
-    quote:
-      "As a CSR partner, we get quarterly utilisation reports down to the last rupee. That transparency is rare.",
-    name: "Anita Rao",
-    role: "CSR Head, Partner Company",
-  },
-];
-
-const DONORS = [
-  { name: "Vikram S.", amount: 25000, city: "Mumbai" },
-  { name: "Anonymous Donor", amount: 11000, city: "Delhi" },
-  { name: "Priya M.", amount: 5100, city: "Pune" },
-  { name: "Anonymous Donor", amount: 50000, city: "Bengaluru" },
-  { name: "Imran K.", amount: 2100, city: "Hyderabad" },
-  { name: "Neha J.", amount: 7500, city: "Indore" },
-];
 
 const NEWS = [
   {
@@ -89,61 +25,6 @@ const NEWS = [
 ];
 
 const inr = (n: number) => "₹" + n.toLocaleString("en-IN");
-
-function Counter({ value, suffix }: { value: number; suffix: string }) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const [n, setN] = useState(0);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const io = new IntersectionObserver(([e]) => {
-      if (!e.isIntersecting) return;
-      io.disconnect();
-      const start = performance.now();
-      const tick = (t: number) => {
-        const p = Math.min((t - start) / 1600, 1);
-        setN(Math.round(value * (1 - Math.pow(1 - p, 3))));
-        if (p < 1) requestAnimationFrame(tick);
-      };
-      requestAnimationFrame(tick);
-    });
-    io.observe(el);
-    return () => io.disconnect();
-  }, [value]);
-
-  return (
-    <span ref={ref}>
-      {n.toLocaleString("en-IN")}
-      {suffix}
-    </span>
-  );
-}
-
-function ProgressBar({ pct }: { pct: number }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [w, setW] = useState(0);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const io = new IntersectionObserver(([e]) => {
-      if (e.isIntersecting) {
-        setW(pct);
-        io.disconnect();
-      }
-    });
-    io.observe(el);
-    return () => io.disconnect();
-  }, [pct]);
-  return (
-    <div ref={ref} className="h-1.5 w-full overflow-hidden rounded-full bg-sand">
-      <div
-        className="h-full rounded-full bg-orange transition-[width] duration-1000 ease-out"
-        style={{ width: `${w}%` }}
-      />
-    </div>
-  );
-}
 
 export function Home() {
   const [ti, setTi] = useState(0);
@@ -208,8 +89,9 @@ export function Home() {
               </span>
             </h1>
             <p className="mt-4 sm:mt-5 max-w-xl text-base sm:text-lg leading-relaxed text-cream/95 font-normal">
-              We work where help is hardest to reach — classrooms without teachers, villages without
-              clinics, women without a first income. Every rupee is tracked, reported and audited.
+              We're building Helping Hands Foundation to reach where help is hardest to find — old
+              age care, medical relief, education for poor children, and support for women, in and
+              around Adoni, Kurnool District. Every rupee will be tracked and audited from day one.
             </p>
             <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
               <Link
@@ -227,16 +109,11 @@ export function Home() {
               </Link>
             </div>
 
-            {/* TRUST STRIP CHECKMARKS */}
-            <div className="mt-8 sm:mt-12 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6 border-t border-white/20 pt-6 text-xs font-medium text-cream/90">
+            {/* TRUST STRIP */}
+            <div className="mt-8 sm:mt-12 border-t border-white/20 pt-6 text-xs font-medium text-cream/90">
               <span className="flex items-center gap-2">
-                <span className="text-emerald-400 font-bold">✓</span> 80G tax exemption available
-              </span>
-              <span className="flex items-center gap-2">
-                <span className="text-emerald-400 font-bold">✓</span> 12A registered
-              </span>
-              <span className="flex items-center gap-2">
-                <span className="text-emerald-400 font-bold">✓</span> NGO Darpan listed
+                <span className="text-amber-300 font-bold">●</span> Registered Public Charitable
+                Trust · Applications for 12A, 80G & NGO Darpan in progress
               </span>
             </div>
           </div>
@@ -285,27 +162,6 @@ export function Home() {
         </div>
       </section>
 
-      {/* IMPACT STRIP — Luxury High-Contrast Sand/Cream Section */}
-      <section className="bg-gradient-to-b from-[#F7F4EE] to-[#EFEAE1] text-[#0A1828] py-14 sm:py-20 border-b border-border shadow-inner">
-        <div className="shell">
-          <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-            {COUNTERS.map((c) => (
-              <div
-                key={c.label}
-                className="rounded-2xl border border-border/60 bg-white p-6 sm:p-7 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-orange/40 flex flex-col justify-center"
-              >
-                <p className="font-display text-4xl sm:text-5xl text-coral font-bold tracking-tight">
-                  <Counter value={c.value} suffix={c.suffix} />
-                </p>
-                <p className="mt-3 text-xs font-bold uppercase tracking-[0.18em] text-navy/75">
-                  {c.label}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* FOCUS AREAS — asymmetric */}
       <section className="section-pad">
         <div className="shell">
@@ -313,7 +169,7 @@ export function Home() {
             <div className="max-w-2xl">
               <p className="eyebrow rule-teal">Our Focus Areas</p>
               <h2 className="font-display text-3xl text-brown lg:text-[2.75rem] lg:leading-[1.1]">
-                Four commitments, chosen because the gap is widest there.
+                Commitments chosen based on community needs.
               </h2>
             </div>
           </Reveal>
@@ -325,12 +181,12 @@ export function Home() {
                   <BookOpen className="size-9 text-orange" />
                   <h3 className="mt-8 font-display text-3xl lg:text-4xl">Education</h3>
                   <p className="mt-4 max-w-md text-[15px] leading-relaxed text-on-navy/75">
-                    Bridge schools, learning kits, village libraries and scholarship support for
-                    first-generation learners across 34 cities and their surrounding blocks.
+                    Local reading rooms, learning materials, and scholarship support for children in
+                    need in and around Adoni, Kurnool District.
                   </p>
                 </div>
                 <div className="mt-10 flex items-end justify-between border-t border-on-navy/20 pt-6">
-                  <p className="font-display text-2xl text-orange">21,400 children</p>
+                  <p className="font-display text-2xl text-orange">Scholarships & Libraries</p>
                   <Link href="/projects" className="text-sm font-medium hover:text-orange">
                     Explore <ArrowUpRight className="inline size-4" />
                   </Link>
@@ -369,80 +225,21 @@ export function Home() {
         </div>
       </section>
 
-      {/* CAMPAIGNS */}
-      <section className="section-pad bg-sand">
-        <div className="shell">
-          <div className="flex flex-wrap items-end justify-between gap-6">
-            <div className="max-w-xl">
-              <p className="eyebrow rule-teal">Active Campaigns</p>
-              <h2 className="font-display text-3xl text-brown lg:text-[2.5rem]">
-                Fund a specific outcome, not a vague cause.
-              </h2>
-            </div>
-            <Link href="/campaigns" className="text-sm font-semibold text-teal hover:text-navy">
-              All campaigns <ArrowUpRight className="inline size-4" />
-            </Link>
-          </div>
-
-          <div className="mt-12 grid gap-5 md:grid-cols-3">
-            {CAMPAIGNS.map((c, i) => {
-              const pct = Math.round((c.raised / c.goal) * 100);
-              return (
-                <Reveal key={c.title} delay={i * 90}>
-                  <article className="flex h-full flex-col rounded-md border border-border bg-card p-7">
-                    <p className="eyebrow">{c.cat}</p>
-                    <h3 className="mt-3 font-display text-xl leading-snug text-brown">{c.title}</h3>
-                    <div className="mt-auto pt-8">
-                      <div className="mb-2 flex items-baseline justify-between text-sm">
-                        <span className="font-semibold text-navy">{inr(c.raised)}</span>
-                        <span className="text-muted-foreground">of {inr(c.goal)}</span>
-                      </div>
-                      <ProgressBar pct={pct} />
-                      <div className="mt-2 flex justify-between text-xs text-muted-foreground">
-                        <span className="font-semibold text-orange">{pct}% funded</span>
-                        <span>{c.days} days left</span>
-                      </div>
-                      <div className="mt-6 flex gap-2">
-                        <Link
-                          href="/donate"
-                          className="flex-1 rounded-sm bg-coral px-4 py-2.5 text-center text-sm font-semibold text-cream"
-                        >
-                          Donate
-                        </Link>
-                        <Link
-                          href="/campaigns"
-                          className="flex-1 rounded-sm border border-border px-4 py-2.5 text-center text-sm font-medium text-navy hover:border-navy"
-                        >
-                          Details
-                        </Link>
-                      </div>
-                    </div>
-                  </article>
-                </Reveal>
-              );
-            })}
-          </div>
-          <p className="mt-6 text-xs text-muted-foreground">
-            Sample data — campaigns are editable from the admin panel.
-          </p>
-        </div>
-      </section>
-
       {/* FEATURED PROJECTS — alternating */}
       <section className="section-pad">
         <div className="shell space-y-10 sm:space-y-16 lg:space-y-20">
           {[
             {
-              tag: "Education · Maharashtra",
+              tag: "Education · Kurnool District",
               t: "The Bridge School Programme",
-              d: "Children who dropped out during the pandemic are brought back through six-month intensive bridge classes, then mainstreamed into government schools with continued mentoring.",
-              stat: "3,180 children re-enrolled",
+              d: "Helping children return to school through intensive local bridge classes, and providing government school integration with continued mentoring.",
+              stat: "Targeting 2,000+ poor children",
             },
             {
-              tag: "Health · Rural Belt",
+              tag: "Health · Adoni Mandal",
               t: "Doctor On Wheels",
-              d: "A fully equipped medical van covers eleven villages on a fixed weekly rota, offering diagnostics, medicines, antenatal checks and referrals — free of cost.",
-              stat: "112 camps in 2025-26",
+              d: "A proposed fully equipped medical van to cover villages on a fixed weekly rota, offering diagnostics, medicines, checks and referrals.",
+              stat: "Planned weekly service",
             },
           ].map((p, i) => (
             <Reveal key={p.t}>
@@ -472,68 +269,6 @@ export function Home() {
         </div>
       </section>
 
-      {/* EVENTS STRIP */}
-      <section className="border-y border-border bg-sand py-8 sm:py-12">
-        <div className="shell">
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <h2 className="font-display text-2xl text-brown">Upcoming Events</h2>
-            <Link href="/events" className="text-sm font-semibold text-teal hover:text-navy">
-              Full calendar <ArrowUpRight className="inline size-4" />
-            </Link>
-          </div>
-          <div className="mt-6 sm:mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {EVENTS.map((e) => (
-              <article
-                key={e.title}
-                className="flex gap-4 rounded-md border border-border bg-card p-5 transition-colors hover:border-teal"
-              >
-                <div className="flex size-14 shrink-0 flex-col items-center justify-center rounded-sm bg-navy text-on-navy">
-                  <span className="font-display text-lg leading-none">{e.d}</span>
-                  <span className="text-[10px] uppercase tracking-widest">{e.m}</span>
-                </div>
-                <div>
-                  <h3 className="text-[15px] font-semibold leading-snug text-navy">{e.title}</h3>
-                  <p className="mt-1.5 flex items-center gap-1 text-xs text-muted-foreground">
-                    <MapPin className="size-3" /> {e.place}
-                  </p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* TESTIMONIALS */}
-      <section className="section-pad bg-navy text-on-navy">
-        <div className="shell max-w-4xl">
-          <Quote className="size-10 text-orange" />
-          <blockquote className="mt-8 font-display text-2xl leading-[1.45] lg:text-[2.1rem]">
-            “{TESTIMONIALS[ti].quote}”
-          </blockquote>
-          <div className="mt-10 flex items-center justify-between gap-6">
-            <div className="flex items-center gap-4">
-              <div className="size-12 rounded-full bg-teal/40" />
-              <div>
-                <p className="font-semibold">{TESTIMONIALS[ti].name}</p>
-                <p className="text-sm text-on-navy/65">{TESTIMONIALS[ti].role}</p>
-              </div>
-            </div>
-            <div className="flex gap-2">
-              {TESTIMONIALS.map((_, i) => (
-                <button
-                  key={i}
-                  aria-label={`Testimonial ${i + 1}`}
-                  onClick={() => setTi(i)}
-                  className={`h-1.5 rounded-full transition-all ${
-                    i === ti ? "w-8 bg-orange" : "w-3 bg-on-navy/30"
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* PARTNERS */}
       <section className="py-10 sm:py-14">
         <div className="shell">
@@ -558,26 +293,9 @@ export function Home() {
         </div>
       </section>
 
-      {/* DONOR WALL + NEWS */}
+      {/* NEWS & PRESS */}
       <section className="section-pad bg-sand">
-        <div className="shell grid gap-14 lg:grid-cols-[0.85fr_1.15fr]">
-          <div>
-            <p className="eyebrow rule-teal">Recent Donors</p>
-            <h2 className="font-display text-2xl text-brown">
-              Thank you, every single one of you.
-            </h2>
-            <ul className="mt-7 divide-y divide-border border-y border-border">
-              {DONORS.map((d, i) => (
-                <li key={i} className="flex items-center justify-between py-3 text-sm">
-                  <span className="text-ink/80">
-                    {d.name} <span className="text-muted-foreground">· {d.city}</span>
-                  </span>
-                  <span className="font-semibold text-teal">{inr(d.amount)}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
+        <div className="shell max-w-3xl">
           <div>
             <div className="flex flex-wrap items-end justify-between gap-4">
               <div>

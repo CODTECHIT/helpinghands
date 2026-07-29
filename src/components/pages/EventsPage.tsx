@@ -79,7 +79,16 @@ export function EventsPage() {
           </div>
 
           {list.length === 0 && (
-            <p className="py-20 text-center text-ink/60">Nothing listed here yet.</p>
+            <div className="max-w-2xl mx-auto text-center py-20 bg-card border border-border mt-10">
+              <h2 className="font-display text-2xl text-brown">
+                No scheduled events at this time.
+              </h2>
+              <p className="mt-4 text-sm text-ink/70 leading-relaxed">
+                Helping Hands Foundation will schedule community health camps, awareness programmes,
+                and welfare drives in Adoni and Kurnool District following the completion of
+                statutory registrations.
+              </p>
+            </div>
           )}
         </div>
       </section>

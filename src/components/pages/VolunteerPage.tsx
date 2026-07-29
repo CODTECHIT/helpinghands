@@ -128,15 +128,9 @@ export function VolunteerPage() {
               Tell us where you are and what you can hold to.
             </h2>
             <p className="mt-6 max-w-md leading-relaxed text-ink/75">
-              We place volunteers in batches, and the next orientation is on 27 August 2026 in Pune.
-              Remote roles are placed continuously.
+              We place volunteers in batches. Future volunteer orientation details for our Adoni
+              office will be published here once local operations begin.
             </p>
-            <Link
-              href="/events"
-              className="mt-6 inline-block text-sm font-semibold text-teal underline underline-offset-4"
-            >
-              See the orientation calendar
-            </Link>
           </div>
 
           <div className="border border-border bg-card p-8 lg:p-10">

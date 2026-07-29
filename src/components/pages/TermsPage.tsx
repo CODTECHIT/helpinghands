@@ -8,12 +8,12 @@ export function TermsPage() {
       eyebrow="Legal"
       title="The rules of using this site, in plain language."
       intro="By using this website, donating, or applying for membership or a volunteer placement, you agree to the terms below. They are written to be read, not to be skipped."
-      updated="1 April 2026"
+      updated="3 August 2026"
       sections={[
         {
           heading: "Who we are",
           paras: [
-            "Helping Hands Foundation is a public charitable trust registered in Pune, Maharashtra, holding 12A and 80G certification and FCRA registration. References to “we”, “us” and “the Foundation” mean that trust.",
+            "Helping Hands Foundation is a Public Charitable Trust registered in Adoni, Kurnool District, Andhra Pradesh. Applications for Section 12A and 80G registrations are currently in progress. References to “we”, “us” and “the Foundation” mean that trust.",
           ],
         },
         {
@@ -62,7 +62,7 @@ export function TermsPage() {
         {
           heading: "Governing law",
           paras: [
-            "These terms are governed by the laws of India. Disputes are subject to the exclusive jurisdiction of the courts at Pune, Maharashtra.",
+            "These terms are governed by the laws of India. Disputes are subject to the exclusive jurisdiction of the courts at Adoni, Andhra Pradesh.",
           ],
         },
       ]}

@@ -6,20 +6,20 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { Reveal } from "@/components/Reveal";
 
 const OBJECTIVES = [
-  "Ensure every child in our operating blocks completes at least secondary education.",
-  "Take primary healthcare within five kilometres of every household we serve.",
-  "Enable 5,000 women to earn a first independent income by 2030.",
-  "Restore and maintain community water bodies and green cover in partner villages.",
-  "Publish audited, project-wise fund utilisation every single quarter.",
+  "Establish and run an Old Age Home providing food, shelter and care to the elderly, aged 60+, irrespective of caste or creed.",
+  "Provide medical relief — free or subsidised treatment, medical camps, eye camps, and blood donation camps for the needy.",
+  "Support and educate poor and orphaned children, including scholarships and school essentials.",
+  "Run counselling services, yoga classes, and awareness programmes for community health and wellbeing.",
+  "Promote women's welfare — awareness of rights, shelter for those in need, and family counselling.",
+  "Provide community halls and shelters serving the public without discrimination.",
 ];
 
 const COMPLIANCE = [
-  { label: "Registration No.", value: "[PLACEHOLDER]" },
-  { label: "12A Registration", value: "[12A NUMBER]" },
-  { label: "80G Certificate", value: "[80G NUMBER]" },
-  { label: "NGO Darpan ID", value: "[DARPAN ID]" },
-  { label: "FCRA Number", value: "[FCRA NUMBER]" },
-  { label: "PAN", value: "[PAN NUMBER]" },
+  { label: "Registration No.", value: "Pending registration with Sub-Registrar" },
+  { label: "12A Registration", value: "Application in process" },
+  { label: "80G Certificate", value: "Application in process" },
+  { label: "NGO Darpan ID", value: "Application in process" },
+  { label: "PAN", value: "Pending allotment" },
 ];
 
 export function About() {
@@ -30,16 +30,17 @@ export function About() {
           <div>
             <p className="eyebrow rule-teal">About Us</p>
             <h1 className="max-w-[16ch] font-display text-4xl leading-[1.08] text-brown lg:text-[3.5rem]">
-              It began with one classroom and eleven children.
+              Established to serve our community in Adoni.
             </h1>
           </div>
           <div className="self-end">
             <p className="text-[17px] leading-relaxed text-ink/75">
-              In 2014, a group of five friends rented a single room behind a municipal school and
-              started evening classes for children who had stopped attending. Twelve years later,
-              Helping Hands Foundation runs education, health, empowerment and environment
-              programmes across 34 cities — but the working method has not changed: show up, stay
-              long, and count everything.
+              Helping Hands Foundation was established as a Public Charitable Trust on 3rd August
+              2026 by Sri A M Praveen Kumar, based in Adoni, Kurnool District, Andhra Pradesh. The
+              Trust was founded to serve people in and around Adoni — running an old age home,
+              providing medical help to the needy, supporting orphaned children, education for poor
+              children, women's welfare, and community shelters — open to all, irrespective of
+              caste, creed or religion.
             </p>
           </div>
         </div>
@@ -52,8 +53,8 @@ export function About() {
             <div className="border-l-2 border-teal pl-8">
               <p className="eyebrow mb-4">Our Mission</p>
               <p className="font-display text-2xl leading-[1.4] text-brown lg:text-[1.85rem]">
-                To remove the everyday obstacles — distance, cost, information, dignity — that keep
-                people from education, health and honest work.
+                To provide care, dignity and opportunity to the elderly, the sick, the poor, and
+                women in our community — through direct welfare programmes, free of discrimination.
               </p>
             </div>
           </Reveal>
@@ -61,8 +62,9 @@ export function About() {
             <div className="border-l-2 border-orange pl-8">
               <p className="eyebrow mb-4">Our Vision</p>
               <p className="font-display text-2xl leading-[1.4] text-brown lg:text-[1.85rem]">
-                A country where a child's postcode no longer decides how far they will study, or how
-                long they will live.
+                A community in Adoni and Kurnool District where no elderly person is without care,
+                no child is without schooling, and no family is without access to basic medical
+                relief.
               </p>
             </div>
           </Reveal>

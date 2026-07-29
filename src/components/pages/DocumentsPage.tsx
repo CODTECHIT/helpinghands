@@ -72,10 +72,10 @@ export function DocumentsPage() {
               <p className="eyebrow mb-4">At a glance</p>
               <dl className="space-y-4 text-sm">
                 {[
-                  ["Programme spend", "92.2%"],
-                  ["Administration", "7.8%"],
-                  ["Fundraising", "0%"],
-                  ["Last audit", "Jun 2026"],
+                  ["Expected Program spend", "> 90%"],
+                  ["Expected Administration", "< 10%"],
+                  ["Expected Fundraising", "0%"],
+                  ["Last audit", "Pending (FY27)"],
                 ].map(([k, v]) => (
                   <div
                     key={k}

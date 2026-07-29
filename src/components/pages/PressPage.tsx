@@ -20,7 +20,7 @@ export function PressPage() {
       <PageHero
         eyebrow="Press"
         title="For journalists: the facts, the photographs and a named contact."
-        intro="We respond to media enquiries within one working day. Field visits can be arranged with a week's notice, subject to our child-safeguarding protocol."
+        intro="We respond to media enquiries within one working day. Field visits can be arranged with a week's notice, subject to our media protocols."
       />
 
       <section className="section-pad">
@@ -55,10 +55,10 @@ export function PressPage() {
             <div className="mt-14 border-t border-border pt-10">
               <p className="eyebrow rule-teal">Boilerplate</p>
               <p className="mt-2 max-w-3xl font-display text-xl leading-relaxed text-brown">
-                “Helping Hands Foundation is a public charitable trust registered in Pune in 2011,
-                working across education, healthcare, women's enterprise and environmental
-                restoration in rural Maharashtra. It has reached over 52,000 direct beneficiaries
-                and publishes fund utilisation quarterly.”
+                “Helping Hands Foundation was established as a Public Charitable Trust on 3rd August
+                2026 by Sri A M Praveen Kumar, based in Adoni, Kurnool District, Andhra Pradesh. The
+                Trust was founded to serve people in and around Adoni, focusing on old age care,
+                medical relief, education for poor children, and women's welfare.”
               </p>
               <p className="mt-4 text-xs text-muted-foreground">
                 Please quote verbatim. For any other description, check with us first.
@@ -69,15 +69,10 @@ export function PressPage() {
           <aside className="space-y-8 self-start lg:sticky lg:top-28">
             <div className="border border-border bg-card p-6">
               <p className="eyebrow mb-4">Media contact</p>
-              <p className="font-display text-lg text-brown">Sneha Rane</p>
-              <p className="mt-1 text-xs text-muted-foreground">Head of Programmes</p>
-              <a
-                href="mailto:press@helpinghandsfoundation.org"
-                className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-teal"
-              >
-                <Mail className="size-4" /> press@helpinghandsfoundation.org
-              </a>
-              <p className="mt-3 text-xs text-ink/65">+91 20 4000 1122 · Mon–Fri, 10am–6pm IST</p>
+              <p className="text-sm text-ink/70 leading-relaxed">
+                For media inquiries, please reach out to us using the mailing address at our head
+                office or through the contact form on this site.
+              </p>
             </div>
 
             <div className="border border-border p-6">

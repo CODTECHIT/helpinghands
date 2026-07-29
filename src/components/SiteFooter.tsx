@@ -46,8 +46,8 @@ export function SiteFooter() {
             className="h-14 w-auto rounded-sm bg-cream p-1"
           />
           <p className="mt-5 max-w-xs text-sm leading-relaxed">
-            A registered non-profit working across education, health, women empowerment and the
-            environment. Together, we can change lives.
+            A registered Public Charitable Trust based in Adoni, Kurnool District, Andhra Pradesh,
+            working across old age care, medical relief, education, and women's welfare.
           </p>
           <div className="mt-6 flex gap-3">
             {[Facebook, Instagram, Linkedin, Youtube].map((Icon, i) => (
@@ -82,16 +82,11 @@ export function SiteFooter() {
       </div>
 
       <div className="border-t border-on-navy/10">
-        <div className="shell grid gap-6 py-8 text-sm md:grid-cols-3">
-          <p className="flex gap-2">
+        <div className="shell flex flex-col items-center justify-center gap-6 py-8 text-sm text-center">
+          <p className="flex gap-2 justify-center max-w-2xl">
             <MapPin className="mt-0.5 size-4 shrink-0 text-teal" />
-            Head Office, [Street Address], [City], [State] — [PIN]
-          </p>
-          <p className="flex gap-2">
-            <Phone className="mt-0.5 size-4 shrink-0 text-teal" /> +91 00000 00000
-          </p>
-          <p className="flex gap-2">
-            <Mail className="mt-0.5 size-4 shrink-0 text-teal" /> info@helpinghands.org
+            Head Office: H.No. 4/211/2, Shakthi Gudi, Adoni – 518301, Adoni Mandal, Kurnool
+            District, Andhra Pradesh
           </p>
         </div>
       </div>

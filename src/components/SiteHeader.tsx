@@ -58,21 +58,9 @@ export function SiteHeader() {
       <div className="hidden bg-navy-deep text-on-navy/80 md:block">
         <div className="shell flex h-9 items-center justify-between text-[12px]">
           <div className="flex items-center gap-5">
-            <a href="tel:+910000000000" className="flex items-center gap-1.5 hover:text-orange">
-              <Phone className="size-3.5" /> +91 00000 00000
-            </a>
-            <a
-              href="https://wa.me/910000000000"
-              className="flex items-center gap-1.5 hover:text-orange"
-            >
-              <MessageCircle className="size-3.5" /> WhatsApp
-            </a>
-            <a
-              href="mailto:info@helpinghands.org"
-              className="flex items-center gap-1.5 hover:text-orange"
-            >
-              <Mail className="size-3.5" /> info@helpinghands.org
-            </a>
+            <span className="text-amber-300 font-semibold">
+              Registered Public Charitable Trust · Est. 2026
+            </span>
           </div>
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-1">

@@ -4,11 +4,11 @@ import { ProjectsPage } from "@/components/pages/ProjectsPage";
 export const metadata: Metadata = {
   title: "Our Projects | Helping Hands Foundation",
   description:
-    "Education, healthcare, women empowerment and environment projects across Maharashtra — with locations, budgets, partners and measured outcomes.",
+    "Education, healthcare, women empowerment and environment projects in and around Adoni, Kurnool District, Andhra Pradesh — with locations, budgets, partners and measured outcomes.",
   openGraph: {
     title: "Our Projects | Helping Hands Foundation",
     description:
-      "Education, healthcare, women empowerment and environment projects across Maharashtra — with locations, budgets, partners and measured outcomes.",
+      "Education, healthcare, women empowerment and environment projects in and around Adoni, Kurnool District, Andhra Pradesh — with locations, budgets, partners and measured outcomes.",
   },
 };
 

@@ -7,10 +7,10 @@ import { Reveal } from "@/components/Reveal";
 import { AWARDS, MILESTONES } from "@/data/content";
 
 const NUMBERS = [
-  { value: "52,000+", label: "Direct beneficiaries" },
-  { value: "₹4.62 cr", label: "Programme spend, FY 2025-26" },
-  { value: "7.8%", label: "Administrative cost ratio" },
-  { value: "15", label: "Years in the field" },
+  { value: "Est. 2026", label: "Establishment Year" },
+  { value: "3", label: "Life Trustees" },
+  { value: "6", label: "Trust Objectives" },
+  { value: "0", label: "Administrative Remuneration" },
 ];
 
 export function AchievementsPage() {
@@ -60,20 +60,12 @@ export function AchievementsPage() {
 
           <aside className="self-start lg:sticky lg:top-28">
             <div className="border border-border bg-card p-6">
-              <p className="eyebrow mb-5">Recognition</p>
-              <ul className="space-y-5">
-                {AWARDS.map((a) => (
-                  <li key={a.title} className="flex gap-3">
-                    <Award className="mt-0.5 size-4 shrink-0 text-orange" />
-                    <div>
-                      <p className="text-sm font-semibold leading-snug text-brown">{a.title}</p>
-                      <p className="mt-0.5 text-xs text-muted-foreground">
-                        {a.body} · {a.year}
-                      </p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+              <p className="eyebrow mb-4">Credibility</p>
+              <p className="text-sm text-ink/70 leading-relaxed">
+                Helping Hands Foundation serves without any profit motive. All audits, compliance
+                documents, and utilization reports will be published here as soon as they are
+                completed.
+              </p>
             </div>
           </aside>
         </div>

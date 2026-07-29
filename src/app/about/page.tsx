@@ -4,11 +4,11 @@ import { About } from "@/components/pages/About";
 export const metadata: Metadata = {
   title: "About Us | Helping Hands Foundation",
   description:
-    "Our founding story, mission and vision, objectives, and registration and compliance details — 12A, 80G, NGO Darpan and FCRA.",
+    "Our founding story, mission and vision, objectives, and registration and compliance details.",
   openGraph: {
     title: "About Us | Helping Hands Foundation",
     description:
-      "Our founding story, mission and vision, objectives, and registration and compliance details — 12A, 80G, NGO Darpan and FCRA.",
+      "Our founding story, mission and vision, objectives, and registration and compliance details.",
   },
 };
 

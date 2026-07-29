@@ -86,33 +86,14 @@ export function ContactPage() {
               <ul className="space-y-4 text-sm text-ink/80">
                 <li className="flex gap-3">
                   <MapPin className="mt-0.5 size-4 shrink-0 text-teal" />
-                  [Street Address], [Area], [City], [State] — [PIN]
-                </li>
-                <li className="flex gap-3">
-                  <Phone className="mt-0.5 size-4 shrink-0 text-teal" /> +91 00000 00000
-                </li>
-                <li className="flex gap-3">
-                  <Mail className="mt-0.5 size-4 shrink-0 text-teal" /> info@helpinghands.org
+                  H.No. 4/211/2, Shakthi Gudi, Adoni – 518301, Adoni Mandal, Kurnool District,
+                  Andhra Pradesh
                 </li>
                 <li className="flex gap-3">
                   <Clock className="mt-0.5 size-4 shrink-0 text-teal" /> Mon – Sat, 10:00 – 18:00
                   IST
                 </li>
               </ul>
-              <div className="mt-7 flex gap-2">
-                <a
-                  href="https://wa.me/910000000000"
-                  className="flex flex-1 items-center justify-center gap-2 rounded-sm bg-teal px-4 py-2.5 text-sm font-semibold text-cream"
-                >
-                  <MessageCircle className="size-4" /> WhatsApp
-                </a>
-                <a
-                  href="tel:+910000000000"
-                  className="flex flex-1 items-center justify-center gap-2 rounded-sm border border-navy px-4 py-2.5 text-sm font-semibold text-navy"
-                >
-                  <Phone className="size-4" /> Call
-                </a>
-              </div>
             </div>
 
             <div className="flex aspect-[4/3] items-center justify-center rounded-md border border-dashed border-border bg-sand text-center text-xs text-muted-foreground">

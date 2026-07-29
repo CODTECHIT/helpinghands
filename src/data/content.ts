@@ -276,81 +276,7 @@ export type EventItem = {
   summary: string;
 };
 
-export const EVENTS: EventItem[] = [
-  {
-    slug: "community-health-camp-nashik",
-    title: "Community Health Camp",
-    date: "12 August 2026",
-    day: "12",
-    month: "Aug",
-    time: "8:00 AM — 4:00 PM",
-    place: "Zilla Parishad School, Nashik",
-    type: "Camp",
-    summary:
-      "General medicine, paediatrics, eye screening and free diagnostics. Walk-ins welcome; bring any previous prescriptions.",
-  },
-  {
-    slug: "volunteer-orientation-pune",
-    title: "Volunteer Orientation — Batch 14",
-    date: "27 August 2026",
-    day: "27",
-    month: "Aug",
-    time: "10:00 AM — 1:00 PM",
-    place: "Foundation Office, Pune",
-    type: "Training",
-    summary:
-      "Mandatory half-day induction covering field conduct, child-safety protocol and reporting. Required before any field placement.",
-  },
-  {
-    slug: "teachers-day-felicitation",
-    title: "Teachers' Day Felicitation",
-    date: "5 September 2026",
-    day: "05",
-    month: "Sep",
-    time: "5:00 PM — 7:30 PM",
-    place: "Deshpande Hall, Nagpur",
-    type: "Ceremony",
-    summary:
-      "Honouring 40 government-school teachers nominated by their own students. Open to the public.",
-  },
-  {
-    slug: "tree-plantation-aurangabad",
-    title: "Monsoon Tree Plantation Drive",
-    date: "21 September 2026",
-    day: "21",
-    month: "Sep",
-    time: "6:30 AM — 11:00 AM",
-    place: "Kanhori village, Aurangabad",
-    type: "Drive",
-    summary:
-      "Planting 2,000 native saplings with the village self-help group. Transport from Aurangabad provided; register in advance.",
-  },
-  {
-    slug: "annual-day-2026",
-    title: "Foundation Annual Day 2026",
-    date: "14 June 2026",
-    day: "14",
-    month: "Jun",
-    time: "6:00 PM",
-    place: "Balgandharva, Pune",
-    type: "Ceremony",
-    past: true,
-    summary:
-      "Annual report presentation, donor felicitation and a performance by children from the Village Library Network.",
-  },
-  {
-    slug: "blood-donation-may",
-    title: "Blood Donation Camp",
-    date: "3 May 2026",
-    day: "03",
-    month: "May",
-    time: "9:00 AM — 3:00 PM",
-    place: "Foundation Office, Pune",
-    type: "Camp",
-    past: true,
-    summary: "218 units collected in partnership with the District Civil Hospital blood bank.",
-  },
-];
+export const EVENTS: EventItem[] = [];
 
 export type NewsItem = {
   slug: string;
@@ -453,23 +379,18 @@ export const GALLERY = [
 ] as const;
 
 export const DOCUMENTS = [
-  { name: "Annual Report 2025-26", cat: "Annual Reports", size: "4.2 MB", date: "24 Jun 2026" },
-  { name: "Annual Report 2024-25", cat: "Annual Reports", size: "3.9 MB", date: "19 Jun 2025" },
-  { name: "Audited Accounts FY 2025-26", cat: "Financials", size: "1.8 MB", date: "24 Jun 2026" },
-  { name: "Form 10B Audit Report", cat: "Financials", size: "620 KB", date: "24 Jun 2026" },
   {
-    name: "Quarterly Utilisation — Q1 FY26",
-    cat: "Financials",
-    size: "410 KB",
-    date: "12 Jul 2026",
+    name: "Trust Deed (3rd August 2026)",
+    cat: "Registrations",
+    size: "1.2 MB",
+    date: "03 Aug 2026",
   },
-  { name: "12A Registration Certificate", cat: "Registrations", size: "280 KB", date: "—" },
-  { name: "80G Exemption Certificate", cat: "Registrations", size: "310 KB", date: "—" },
-  { name: "FCRA Registration", cat: "Registrations", size: "295 KB", date: "—" },
-  { name: "NGO Darpan Listing", cat: "Registrations", size: "180 KB", date: "—" },
-  { name: "Child Protection Policy", cat: "Policies", size: "540 KB", date: "01 Apr 2026" },
-  { name: "Whistleblower Policy", cat: "Policies", size: "330 KB", date: "01 Apr 2026" },
-  { name: "Donation & Refund Policy", cat: "Policies", size: "260 KB", date: "01 Apr 2026" },
+  { name: "12A Registration Application", cat: "Registrations", size: "—", date: "In progress" },
+  { name: "80G Exemption Application", cat: "Registrations", size: "—", date: "In progress" },
+  { name: "NGO Darpan Listing Application", cat: "Registrations", size: "—", date: "In progress" },
+  { name: "Child Protection Policy", cat: "Policies", size: "540 KB", date: "03 Aug 2026" },
+  { name: "Whistleblower Policy", cat: "Policies", size: "330 KB", date: "03 Aug 2026" },
+  { name: "Donation & Refund Policy", cat: "Policies", size: "260 KB", date: "03 Aug 2026" },
 ];
 
 export type Person = {
@@ -484,169 +405,43 @@ export type Person = {
 
 export const TEAM: Person[] = [
   {
-    name: "Anjali Deshpande",
-    role: "Founder & Managing Trustee",
+    name: "A M Praveen Kumar",
+    role: "President",
     group: "Board",
-    since: "2011",
-    bio: "Former district education officer. Started the Foundation with a single reading room in Pimpalgaon and still spends one week a month in the field.",
-    initials: "AD",
+    since: "2026",
+    bio: "Son of A M Krishna Murthy, based in Shakthi Gudi, Adoni. Founder-President of Helping Hands Foundation, responsible for overall administration, receiving and disbursing Trust funds, and jointly operating the Trust's bank account.",
+    initials: "PK",
     tone: "teal",
   },
   {
-    name: "Ramesh Kulkarni",
-    role: "Chairperson, Board of Trustees",
+    name: "Jarang Vijay Kumar",
+    role: "Treasurer",
     group: "Board",
-    since: "2013",
-    bio: "Chartered accountant in practice for 28 years. Chairs the audit and finance committee and signs off every quarterly utilisation statement.",
-    initials: "RK",
+    since: "2026",
+    bio: "Son of Jarang Thippanna, based in Ambabhavani Pet, Gowli Pet, Adoni. Responsible for the Trust's finances and joint operation of the bank account alongside the President.",
+    initials: "VK",
     tone: "navy",
   },
   {
-    name: "Dr. Farida Sheikh",
-    role: "Trustee — Health Programmes",
+    name: "Ambaldhage Modigi Savithri Bai",
+    role: "Secretary",
     group: "Board",
-    since: "2016",
-    bio: "Consultant physician who designed the mobile camp protocol and the referral-closure system now used across all forty villages.",
-    initials: "FS",
-    tone: "coral",
-  },
-  {
-    name: "Vikram Sathe",
-    role: "Executive Director",
-    group: "Leadership",
-    since: "2018",
-    bio: "Runs day-to-day operations across four programme verticals. Previously led rural delivery for a national livelihoods mission.",
-    initials: "VS",
-    tone: "navy",
-  },
-  {
-    name: "Sneha Rane",
-    role: "Head of Programmes",
-    group: "Leadership",
-    since: "2019",
-    bio: "Owns programme design, monitoring and the outcome dashboards. Insists nothing is reported that has not been independently verified.",
-    initials: "SR",
-    tone: "orange",
-  },
-  {
-    name: "Imran Qureshi",
-    role: "Head of Finance & Compliance",
-    group: "Leadership",
-    since: "2020",
-    bio: "Manages statutory filings, FCRA compliance and donor reporting. Publishes the quarterly statements on the tenth working day.",
-    initials: "IQ",
-    tone: "teal",
-  },
-  {
-    name: "Meera Patil",
-    role: "Manager — Education",
-    group: "Programme",
-    since: "2021",
-    bio: "Trains and supervises the twelve library facilitators and runs the annual reading assessment with partner schools.",
-    initials: "MP",
-    tone: "coral",
-  },
-  {
-    name: "Sagar Bhosale",
-    role: "Manager — Environment",
-    group: "Programme",
-    since: "2020",
-    bio: "Oversees watershed works and the five-year survival contracts with village self-help groups.",
+    since: "2026",
+    bio: "Wife of Krishna Murthy, based in Shakthi Gudi, Adoni. Responsible for day-to-day administration, correspondence, records, and executing decisions of the Trustees.",
     initials: "SB",
-    tone: "teal",
-  },
-  {
-    name: "Nazneen Shaikh",
-    role: "Manager — Women's Enterprise",
-    group: "Programme",
-    since: "2022",
-    bio: "Builds the employer panels that shape each cohort's curriculum, and tracks graduate income for twelve months after placement.",
-    initials: "NS",
     tone: "orange",
-  },
-  {
-    name: "Prof. Anil Marathe",
-    role: "Advisor — Monitoring & Evaluation",
-    group: "Advisory",
-    since: "2017",
-    bio: "Development economist. Designs our sampling method and reviews every impact claim before it is published.",
-    initials: "AM",
-    tone: "navy",
-  },
-  {
-    name: "Kavita Joshi",
-    role: "Advisor — Child Safeguarding",
-    group: "Advisory",
-    since: "2019",
-    bio: "Child rights lawyer. Authored our child protection policy and conducts the annual safeguarding audit.",
-    initials: "KJ",
-    tone: "coral",
   },
 ];
 
 export const MILESTONES = [
   {
-    year: "2011",
-    title: "Foundation registered",
-    text: "Registered as a public charitable trust in Pune with three trustees and one reading room in Pimpalgaon.",
-  },
-  {
-    year: "2014",
-    title: "12A and 80G granted",
-    text: "Tax exemption secured, opening the door to individual and corporate giving with statutory receipts.",
-  },
-  {
-    year: "2016",
-    title: "First health camp",
-    text: "A borrowed van and four volunteer physicians ran the first camp in Marathwada — 212 consultations in two days.",
-  },
-  {
-    year: "2018",
-    title: "Quarterly reporting begins",
-    text: "We moved from annual to quarterly fund-utilisation reporting, publishing unspent balances alongside spend.",
-  },
-  {
-    year: "2020",
-    title: "FCRA registration",
-    text: "Cleared for foreign contribution, with a dedicated designated bank account and separate audit trail.",
-  },
-  {
-    year: "2022",
-    title: "Women's skill centre opens",
-    text: "The Pune centre took its first cohort of sixty women, built around employer panels rather than fixed curricula.",
-  },
-  {
-    year: "2024",
-    title: "50,000 lives reached",
-    text: "Cumulative direct beneficiaries across education, health, enterprise and environment programmes crossed fifty thousand.",
-  },
-  {
     year: "2026",
-    title: "State CSR Conclave citation",
-    text: "Recognised for financial transparency as a model practice for mid-sized non-profits.",
+    title: "Trust established",
+    text: "Helping Hands Foundation established as a Public Charitable Trust on 3rd August 2026 by Sri A M Praveen Kumar in Adoni, Kurnool District, Andhra Pradesh.",
   },
 ];
 
-export const AWARDS = [
-  {
-    title: "State CSR Conclave — Transparency Citation",
-    body: "Government of Maharashtra",
-    year: "2026",
-  },
-  {
-    title: "Best Rural Health Initiative (Runner-up)",
-    body: "Western India Health Forum",
-    year: "2025",
-  },
-  { title: "GuideStar India — Platinum Certification", body: "GuideStar India", year: "2024" },
-  { title: "Green Cover Award, Aurangabad District", body: "District Collectorate", year: "2023" },
-  {
-    title: "Literacy Champion — Institutional",
-    body: "Zilla Parishad Education Department",
-    year: "2022",
-  },
-  { title: "Credibility Alliance — Desirable Norms", body: "Credibility Alliance", year: "2021" },
-];
+export const AWARDS: { title: string; body: string; year: string }[] = [];
 
 export type Job = {
   slug: string;
@@ -664,29 +459,29 @@ export const JOBS: Job[] = [
     slug: "programme-officer-education",
     title: "Programme Officer — Education",
     team: "Programmes",
-    location: "Nashik (field-based)",
+    location: "Adoni (field-based)",
     type: "Full-time",
     experience: "3-5 years",
     summary:
-      "Supervise eight village libraries, coach facilitators and run the termly reading assessment with partner schools.",
+      "Supervise local children's libraries, coach reading facilitators and run the progress assessments with partner schools.",
     responsibilities: [
       "Weekly field visits to assigned libraries and monthly facilitator coaching sessions",
       "Administer and quality-check the termly reading assessment",
-      "Maintain the panchayat handover schedule and maintenance grant records",
+      "Maintain the local program registers and facilitator records",
     ],
   },
   {
     slug: "referral-coordinator",
     title: "Referral Coordinator — Mobile Health",
     team: "Health",
-    location: "Aurangabad",
+    location: "Adoni",
     type: "Full-time",
     experience: "2+ years",
     summary:
-      "Follow every camp referral by phone until the case is closed or escalated, and keep the closure dashboard current.",
+      "Follow every health camp referral by phone until the case is closed or escalated, and keep the regional records current.",
     responsibilities: [
       "Track each referral from camp to hospital admission or closure",
-      "Coordinate transport and paperwork with the district civil hospital",
+      "Coordinate transport and paperwork with the regional medical centers",
       "Flag repeat cases and drop-offs to the programme manager weekly",
     ],
   },
@@ -694,22 +489,21 @@ export const JOBS: Job[] = [
     slug: "finance-associate",
     title: "Finance & Compliance Associate",
     team: "Finance",
-    location: "Pune (office)",
+    location: "Adoni (office)",
     type: "Full-time",
     experience: "2-4 years",
-    summary:
-      "Support statutory filings, FCRA returns and the quarterly utilisation statements published on this site.",
+    summary: "Support statutory filings, 12A/80G application work, and the donation ledger.",
     responsibilities: [
-      "Prepare project-wise utilisation workings for quarterly publication",
-      "Maintain donor receipts, 80G issuance and the donation ledger",
-      "Assist the statutory and internal auditors through the annual cycle",
+      "Prepare project-wise utilisation workings for statutory records",
+      "Maintain donor receipts, application paperwork and the donation ledger",
+      "Assist the statutory auditors through the annual cycle",
     ],
   },
   {
     slug: "communications-intern",
     title: "Communications Intern",
     team: "Communications",
-    location: "Pune / hybrid",
+    location: "Adoni / hybrid",
     type: "Internship",
     experience: "Students & freshers",
     summary:
